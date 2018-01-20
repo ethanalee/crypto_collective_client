@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SearchBar from 'material-ui-search-bar';
 import logo from './logo.svg';
 import './App.css';
 
@@ -16,6 +17,20 @@ class App extends Component {
       </div>
     );
   }
+  render() {
+    return(
+      <SearchBar
+        onChange={() => console.log('onChange')}
+        onRequestSearch={() => console.log('onRequestSearch')}
+        style={{
+          margin: '0 auto',
+          maxWidth: 800
+        }}
+      />
+    )
+  }
 }
+
+
 
 export default App;
